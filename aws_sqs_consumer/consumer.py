@@ -33,9 +33,9 @@ class Consumer:
         self.attribute_names = attribute_names
         self.message_attribute_names = message_attribute_names
 
-        if not 1 <= batch_size <= 10:
+        if not 1 <= batch_size <= 10000:
             raise ValueError(
-                "Batch size should be between 1 and 10, both inclusive")
+                "Batch size should be between 1 and 10,000, both inclusive")
         self.batch_size = batch_size
 
         self.wait_time_seconds = wait_time_seconds
